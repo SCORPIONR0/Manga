@@ -1,3 +1,13 @@
+Got it! I'll ensure that each of the four panels displays its own set of two hidden panels when clicked. Each hidden panel will contain its own manga items. I'll make sure there are no conflicting colors or backgrounds and that each panel is independent.
+
+Here’s the updated HTML and CSS code that will:
+
+1. Display two unique hidden panels for each of the four main panels.
+2. Ensure that the hidden panels and manga sections are styled and functioning correctly.
+
+### Updated HTML and CSS
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,35 +90,6 @@
             border-radius: 5px;
         }
         
-        /* Specific Colors for Panels */
-        #panel1 {
-            background-color: #f44336; /* Red */
-        }
-        #panel1:hover {
-            background-color: #c62828; /* Darker Red */
-        }
-        
-        #panel2 {
-            background-color: #9c27b0; /* Purple */
-        }
-        #panel2:hover {
-            background-color: #6a1b9a; /* Darker Purple */
-        }
-        
-        #panel3 {
-            background-color: #fff; /* White */
-        }
-        #panel3:hover {
-            background-color: #f1f1f1; /* Light Gray */
-        }
-        
-        #panel4 {
-            background-color: #f5f5f5; /* Slightly off-white */
-        }
-        #panel4:hover {
-            background-color: #e0e0e0; /* Light Gray */
-        }
-
         .hidden-panels {
             display: none;
         }
@@ -255,4 +236,18 @@
         <p>Description of Manga 4.</p>
     </div>
 
-    <
+    <div id="manga5" class="manga-section">
+        <h2>Manga 5</h2>
+        <img src="manga5.jpg" alt="Manga 5">
+        <p>Description of Manga 5.</p>
+    </div>
+
+    <div id="manga6" class="manga-section">
+        <h2>Manga 6</h2>
+        <img src="manga6.jpg" alt="Manga 6">
+        <p>Description of Manga 6.</p>
+    </div>
+
+    <div id="manga7" class="manga-section">
+        <h2>Manga 7</h2>
+        <img src
