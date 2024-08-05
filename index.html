@@ -161,10 +161,40 @@
             <img src="image2.jpg" alt="Image 2">
             <div class="text">Item 2</div>
         </div>
-        <!-- Add more items here -->
     </div>
     
-    <!-- Repeat hidden panels for panel2, panel3, and panel4 -->
+    <div id="panel2" class="hidden-panels">
+        <div class="hidden-panel" onclick="showManga('manga3')">
+            <img src="image3.jpg" alt="Image 3">
+            <div class="text">Item 3</div>
+        </div>
+        <div class="hidden-panel" onclick="showManga('manga4')">
+            <img src="image4.jpg" alt="Image 4">
+            <div class="text">Item 4</div>
+        </div>
+    </div>
+    
+    <div id="panel3" class="hidden-panels">
+        <div class="hidden-panel" onclick="showManga('manga5')">
+            <img src="image5.jpg" alt="Image 5">
+            <div class="text">Item 5</div>
+        </div>
+        <div class="hidden-panel" onclick="showManga('manga6')">
+            <img src="image6.jpg" alt="Image 6">
+            <div class="text">Item 6</div>
+        </div>
+    </div>
+    
+    <div id="panel4" class="hidden-panels">
+        <div class="hidden-panel" onclick="showManga('manga7')">
+            <img src="image7.jpg" alt="Image 7">
+            <div class="text">Item 7</div>
+        </div>
+        <div class="hidden-panel" onclick="showManga('manga8')">
+            <img src="image8.jpg" alt="Image 8">
+            <div class="text">Item 8</div>
+        </div>
+    </div>
     
     <div id="manga1" class="manga-section">
         <h2>Manga 1</h2>
@@ -178,18 +208,36 @@
         <p>Description of Manga 2.</p>
     </div>
     
-    <!-- Add more manga sections here -->
-
-    <script>
-        function showHiddenPanels(panelId) {
-            document.querySelectorAll('.hidden-panels').forEach(el => el.classList.remove('active'));
-            document.querySelector(`#${panelId}`).classList.add('active');
-        }
-
-        function showManga(mangaId) {
-            document.querySelectorAll('.manga-section').forEach(el => el.classList.remove('active'));
-            document.querySelector(`#${mangaId}`).classList.add('active');
-        }
-    </script>
-</body>
-</html>
+    <div id="manga3" class="manga-section">
+        <h2>Manga 3</h2>
+        <img src="manga3.jpg" alt="Manga 3">
+        <p>Description of Manga 3.</p>
+    </div>
+    
+    <div id="manga4" class="manga-section">
+        <h2>Manga 4</h2>
+        <img src="manga4.jpg" alt="Manga 4">
+        <p>Description of Manga 4.</p>
+    </div>
+    
+    <div id="manga5" class="manga-section">
+        <h2>Manga 5</h2>
+        <img src="manga5.jpg" alt="Manga 5">
+        <p>Description of Manga 5.</p>
+    </div>
+    
+    <div id="manga6" class="manga-section">
+        <h2>Manga 6</h2>
+        <img src="manga6.jpg" alt="Manga 6">
+        <p>Description of Manga 6.</p>
+    </div>
+    
+    <div id="manga7" class="manga-section">
+        <h2>Manga 7</h2>
+        <img src="manga7.jpg" alt="Manga 7">
+        <p>Description of Manga 7.</p>
+    </div>
+    
+    <div id="manga8" class="manga-section">
+        <h2>Manga 8</h2>
+        <img src="manga8.jpg" alt
