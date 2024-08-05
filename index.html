@@ -1,3 +1,8 @@
+Absolutely! To make the code consistent, I'll add hidden panels and manga sections for the remaining three panels (Panel 2, Panel 3, and Panel 4) just like Panel 1. Here’s the complete HTML and CSS for the setup:
+
+### Updated HTML and CSS
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,12 +31,13 @@
             max-width: 1200px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
         }
         
         .header .title {
             font-size: 2em;
-            color: #333;
+            color: #fff;
         }
         
         .header .photo {
@@ -52,7 +58,6 @@
         .panel {
             width: 200px;
             height: 200px;
-            background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -62,6 +67,7 @@
             text-align: center;
             cursor: pointer;
             position: relative;
+            transition: background-color 0.3s ease;
         }
         
         .panel:hover {
@@ -79,6 +85,35 @@
             border-radius: 5px;
         }
         
+        /* Specific Colors for Panels */
+        #panel1 {
+            background-color: #f44336; /* Red */
+        }
+        #panel1:hover {
+            background-color: #c62828; /* Darker Red */
+        }
+        
+        #panel2 {
+            background-color: #9c27b0; /* Purple */
+        }
+        #panel2:hover {
+            background-color: #6a1b9a; /* Darker Purple */
+        }
+        
+        #panel3 {
+            background-color: #fff; /* White */
+        }
+        #panel3:hover {
+            background-color: #f1f1f1; /* Light Gray */
+        }
+        
+        #panel4 {
+            background-color: #f5f5f5; /* Slightly off-white */
+        }
+        #panel4:hover {
+            background-color: #e0e0e0; /* Light Gray */
+        }
+
         .hidden-panels {
             display: none;
         }
@@ -133,26 +168,27 @@
 </head>
 <body>
     <header class="header">
-        <div class="title">My Mangas</div>
+        <div class="title">My Website</div>
         <img src="photo.jpg" alt="Photo" class="photo">
     </header>
     
     <div class="panels">
-        <div class="panel" onclick="showHiddenPanels('panel1')">
+        <div id="panel1" class="panel" onclick="showHiddenPanels('panel1-panels')">
             <div class="description">Panel 1</div>
         </div>
-        <div class="panel" onclick="showHiddenPanels('panel2')">
+        <div id="panel2" class="panel" onclick="showHiddenPanels('panel2-panels')">
             <div class="description">Panel 2</div>
         </div>
-        <div class="panel" onclick="showHiddenPanels('panel3')">
+        <div id="panel3" class="panel" onclick="showHiddenPanels('panel3-panels')">
             <div class="description">Panel 3</div>
         </div>
-        <div class="panel" onclick="showHiddenPanels('panel4')">
+        <div id="panel4" class="panel" onclick="showHiddenPanels('panel4-panels')">
             <div class="description">Panel 4</div>
         </div>
     </div>
     
-    <div id="panel1" class="hidden-panels">
+    <!-- Hidden Panels for Panel 1 -->
+    <div id="panel1-panels" class="hidden-panels">
         <div class="hidden-panel" onclick="showManga('manga1')">
             <img src="image1.jpg" alt="Image 1">
             <div class="text">Item 1</div>
@@ -161,34 +197,67 @@
             <img src="image2.jpg" alt="Image 2">
             <div class="text">Item 2</div>
         </div>
-        <!-- Add more items here -->
     </div>
     
-    <!-- Repeat hidden panels for panel2, panel3, and panel4 -->
-    
- <div id="panel2" class="hidden-panels">
-        <div class="hidden-panel" onclick="showManga('manga1')">
-            <img src="image1.jpg" alt="Image 1">
-            <div class="text">Item 1</div>
+    <!-- Hidden Panels for Panel 2 -->
+    <div id="panel2-panels" class="hidden-panels">
+        <div class="hidden-panel" onclick="showManga('manga3')">
+            <img src="image3.jpg" alt="Image 3">
+            <div class="text">Item 3</div>
         </div>
-        <div class="hidden-pane1" onclick="showManga('manga2')">
-            <img src="image2.jpg" alt="Image 2">
-            <div class="text">Item 2</div>
+        <div class="hidden-panel" onclick="showManga('manga4')">
+            <img src="image4.jpg" alt="Image 4">
+            <div class="text">Item 4</div>
         </div>
-        <!-- Add more items here -->
     </div>
-    <!-- Add more manga sections here -->
 
-    <script>
-        function showHiddenPanels(panelId) {
-            document.querySelectorAll('.hidden-panels').forEach(el => el.classList.remove('active'));
-            document.querySelector(`#${panelId}`).classList.add('active');
-        }
+    <!-- Hidden Panels for Panel 3 -->
+    <div id="panel3-panels" class="hidden-panels">
+        <div class="hidden-panel" onclick="showManga('manga5')">
+            <img src="image5.jpg" alt="Image 5">
+            <div class="text">Item 5</div>
+        </div>
+        <div class="hidden-panel" onclick="showManga('manga6')">
+            <img src="image6.jpg" alt="Image 6">
+            <div class="text">Item 6</div>
+        </div>
+    </div>
 
-        function showManga(mangaId) {
-            document.querySelectorAll('.manga-section').forEach(el => el.classList.remove('active'));
-            document.querySelector(`#${mangaId}`).classList.add('active');
-        }
-    </script>
-</body>
-</html>
+    <!-- Hidden Panels for Panel 4 -->
+    <div id="panel4-panels" class="hidden-panels">
+        <div class="hidden-panel" onclick="showManga('manga7')">
+            <img src="image7.jpg" alt="Image 7">
+            <div class="text">Item 7</div>
+        </div>
+        <div class="hidden-panel" onclick="showManga('manga8')">
+            <img src="image8.jpg" alt="Image 8">
+            <div class="text">Item 8</div>
+        </div>
+    </div>
+
+    <!-- Manga Sections -->
+    <div id="manga1" class="manga-section">
+        <h2>Manga 1</h2>
+        <img src="manga1.jpg" alt="Manga 1">
+        <p>Description of Manga 1.</p>
+    </div>
+    
+    <div id="manga2" class="manga-section">
+        <h2>Manga 2</h2>
+        <img src="manga2.jpg" alt="Manga 2">
+        <p>Description of Manga 2.</p>
+    </div>
+    
+    <div id="manga3" class="manga-section">
+        <h2>Manga 3</h2>
+        <img src="manga3.jpg" alt="Manga 3">
+        <p>Description of Manga 3.</p>
+    </div>
+    
+    <div id="manga4" class="manga-section">
+        <h2>Manga 4</h2>
+        <img src="manga4.jpg" alt="Manga 4">
+        <p>Description of Manga 4.</p>
+    </div>
+
+    <
