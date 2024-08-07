@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCORPION_RO Mangas and others</title>
+    <title>Interactive Panels</title>
     <style>
         /* General Reset and Flexbox Centering */
         html, body {
@@ -120,6 +120,22 @@
         }
         .panels > .panel:nth-child(2) { /* Second panel (shown) */
           background: linear-gradient(to right, darkblue, #663399); 
+        }
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) { 
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .panels {
+                flex-direction: column; 
+            }
+            .panel {
+                width: 100%; 
+            }
+            .manga-section {
+                text-align: left; 
+            }
         }
     </style>
 </head>
