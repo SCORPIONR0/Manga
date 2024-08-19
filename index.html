@@ -26,6 +26,7 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
+            position: relative;
         }
         .header .title {
             font-size: 2em;
@@ -34,6 +35,35 @@
         .header .photo {
             width: 150px;
             height: auto;
+        }
+        .header .auth-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .header .auth-links a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1em;
+        }
+        .header .auth-links a:hover {
+            text-decoration: underline;
+        }
+        /* Donate Button */
+        .donate-button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 100px;
+        }
+        .donate-button:hover {
+            background-color: darkgreen;
         }
         /* Panel Section */
         .panels {
@@ -121,13 +151,73 @@
         .panels > .panel:nth-child(2) { /* Second panel (shown) */
           background: linear-gradient(to right, darkblue, #663399); 
         }
+        /* Form Styling */
+        .form-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            margin-top: 0;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form-container .error {
+            color: red;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="title">SCORPION_RO Mangas and others</div>
         <img src="photo.jpg" alt="Photo" class="photo">
+        <div class="auth-links">
+            <a href="#register-section">Register</a>
+            <a href="#login-section">Login</a>
+        </div>
+        <button class="donate-button" onclick="window.location.href='https://your-donation-link.com'">Donate</button>
     </header>
+
+    <!-- Registration Section -->
+    <div id="register-section" class="form-container">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <input type="email" id="regEmail" placeholder="Enter your email" required>
+            <input type="submit" value="Register">
+            <div id="regMessage" class="error"></div>
+        </form>
+    </div>
+
+    <!-- Login Section -->
+    <div id="login-section" class="form-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <input type="submit" value="Login">
+            <div id="loginMessage" class="error"></div>
+        </form>
+    </div>
+
+    <!-- Main Content -->
     <div class="panels">
         <div class="panel" onclick="showHiddenPanels('panel1')">
             <div class="description">SCORPION_RO</div>
@@ -226,16 +316,34 @@
         <img src="manga8.jpg" alt="Manga 8">
         <p>Description of Manga 8.</p>
     </div>
-    <!-- Add more manga sections here -->
+
     <script>
         function showHiddenPanels(panelId) {
-            document.querySelectorAll('.hidden-panels').forEach(el => el.classList.remove('active'));
-            document.querySelector(#${panelId}).classList.add('active');
+            document.querySelectorAll('.hidden-panels').forEach(panel => panel.classList.remove('active'));
+            document.getElementById(panelId).classList.add('active');
         }
+
         function showManga(mangaId) {
-            document.querySelectorAll('.manga-section').forEach(el => el.classList.remove('active'));
-            document.querySelector(#${mangaId}).classList.add('active');
+            document.querySelectorAll('.manga-section').forEach(section => section.classList.remove('active'));
+            document.getElementById(mangaId).classList.add('active');
         }
+
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('regEmail').value;
+
+            // Simulate registration process
+            document.getElementById('regMessage').textContent = 'Registration successful! Check your email for the verification code.';
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            // Simulate login process
+            document.getElementById('loginMessage').textContent = 'Login successful!';
+        });
     </script>
 </body>
 </html>
