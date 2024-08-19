@@ -26,6 +26,7 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
+            position: relative;
         }
         .header .title {
             font-size: 2em;
@@ -34,6 +35,22 @@
         .header .photo {
             width: 150px;
             height: auto;
+        }
+        /* Donate Button Style */
+        .donate-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .donate-button:hover {
+            background-color: #45a049;
         }
         /* Panel Section */
         .panels {
@@ -127,6 +144,7 @@
     <header class="header">
         <div class="title">SCORPION_RO Mangas and others</div>
         <img src="photo.jpg" alt="Photo" class="photo">
+        <button class="donate-button" onclick="window.location.href='https://your-donation-link.com';">Donate</button>
     </header>
     <div class="panels">
         <div class="panel" onclick="showHiddenPanels('panel1')">
