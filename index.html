@@ -3,70 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Path</title>
+    <title>Nexotic Clan</title>
     <style>
-        .container {
+        body {
+            background-color: #333333; /* Grey background */
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 50px;
-        }
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: #f0f0f0;
-            border: 2px solid #333;
-            display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            text-decoration: none;
-            color: black;
-            transition: transform 0.3s;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        .box:hover {
-            transform: scale(1.05);
+
+        .welcome-text {
+            color: #00ff00; /* Bright green color */
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: white; /* White text for better readability */
+            font-size: 18px;
+            max-width: 600px;
+            text-align: center;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="page1.html" class="box">
-            <h2>Option 1</h2>
-        </a>
-        <a href="page2.html" class="box">
-            <h2>Option 2</h2>
-        </a>
-    </div>
-</body>
-</html>
-
-<!-- Create page1.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 1</title>
-</head>
-<body>
-    <h1>Information Page 1</h1>
-    <p>This is the information for page 1. Add your content here.</p>
-    <a href="index.html">Back to selection</a>
-</body>
-</html>
-
-<!-- Create page2.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page 2</title>
-</head>
-<body>
-    <h1>Information Page 2</h1>
-    <p>This is the information for page 2. Add your content here.</p>
-    <a href="index.html">Back to selection</a>
+    <h1 class="welcome-text">Welcome to Nexotic</h1>
+    <p class="description">
+        Nexotic is a dedicated gaming clan committed to excellence and teamwork. 
+        We focus on building a strong community of passionate gamers who support 
+        and inspire each other to reach new heights in competitive gaming.
+    </p>
 </body>
 </html>
